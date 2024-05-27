@@ -13,6 +13,9 @@ app.use(cors());
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "hello assignment 6" });
+});
 app.use("/users", userRoutes);
 app.use("/posts", postRoutes);
 app.use("/comments", commentsRoutes);
